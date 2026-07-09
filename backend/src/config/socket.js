@@ -13,7 +13,7 @@ const socketUsers = new Map();
 const initSocket = (server) => {
     io = new Server(server, {
         cors: {
-            origin: ["http://localhost:5173", "http://localhost:5174"],
+            origin: ["http://localhost:5173", "http://localhost:5174", "https://coding-adda-three.vercel.app"],
             methods: ["GET", "POST"],
             credentials: true
         }
