@@ -55,7 +55,10 @@ const createProblem = async (req,res)=>{
 
        for(const test of testResult){
         if(test.status_id!=3){
-         const errorMsg = test.compile_output || test.stderr || "Runtime Error";
+         let errorMsg = test.compile_output || test.stderr || "Runtime Error";
+         if (test.status_id === 4) errorMsg = "Wrong Answer: Output did not match expected output.";
+         else if (test.status_id === 5) errorMsg = "Time Limit Exceeded.";
+         
          return res.status(400).json({message:`Error in ${language} code: ${errorMsg}`});
         }
        }
@@ -136,7 +139,10 @@ const updateProblem = async (req,res)=>{
 
      for(const test of testResult){
       if(test.status_id!=3){
-       const errorMsg = test.compile_output || test.stderr || "Runtime Error";
+       let errorMsg = test.compile_output || test.stderr || "Runtime Error";
+       if (test.status_id === 4) errorMsg = "Wrong Answer: Output did not match expected output.";
+       else if (test.status_id === 5) errorMsg = "Time Limit Exceeded.";
+
        return res.status(400).json({message:`Error in ${language} code: ${errorMsg}`});
       }
      }
