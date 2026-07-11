@@ -121,9 +121,9 @@ function LandingPage() {
             </div>
 
             <div className="mt-12 flex items-center gap-6 text-gray-400">
-              <a href="#" className="hover:text-white transition-colors"><Github size={24} /></a>
-              <a href="#" className="hover:text-white transition-colors"><Linkedin size={24} /></a>
-              <a href="#" className="hover:text-white transition-colors"><Mail size={24} /></a>
+              <a href="https://github.com/Abhinav6072" className="hover:text-white transition-colors"><Github size={24} /></a>
+              <a href="https://www.linkedin.com/in/abhinav-singh-a6a5b3385?utm_source=share_via&utm_content=profile&utm_medium=member_android" className="hover:text-white transition-colors"><Linkedin size={24} /></a>
+              <a href="mailto:abhinava2k@gmail.com" className="hover:text-white transition-colors"><Mail size={24} /></a>
             </div>
           </motion.div>
 
